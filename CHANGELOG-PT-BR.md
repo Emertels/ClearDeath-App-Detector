@@ -27,3 +27,4 @@
 
 - A documentação de uso, dependências e arquivos necessários foi revisada para corresponder ao comportamento atual do projeto.
 
+- Padroniza a seção do autor, projetos e comunidades oficiais conforme o repositório de referência Antigravity.
