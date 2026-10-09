@@ -1,12 +1,14 @@
-# ClearDeath App Detector
-
-**Version:** 1.0.0  
-**Interface languages:** Brazilian Portuguese, English, Spanish, French, German, Italian, Japanese, Korean, Simplified Chinese, and Russian. The interface follows the Windows UI language and falls back to Brazilian Portuguese when the language is unsupported.
-
-## What it does
+# 🌐 ClearDeath App Detector
 
 Inspect uninstall registry entries and identify applications whose files or uninstallers may be missing.
 
+[![Português (Brasil)](https://img.shields.io/badge/DOCUMENTA%C3%87%C3%83O-PORTUGU%C3%8AS%20(BRASIL)-green?style=for-the-badge)](README.md) [![Documentation](https://img.shields.io/badge/DOCUMENTATION-ENGLISH-0070F3?style=for-the-badge)](README-EN.md)
+
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square) ![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=flat-square) ![Languages](https://img.shields.io/badge/Languages-10%20auto--detected-2ea44f?style=flat-square)
+
+[Portuguese changelog](CHANGELOG-PT-BR.md) · [English changelog](CHANGELOG-EN.md) · [MIT License](LICENSE)
+
+---
 ## Files
 
 clear_death_app_detector.py, ClearDeath-App-Detector.ps1, and Session-Header.ps1 (required by the PowerShell version)
@@ -20,34 +22,34 @@ clear_death_app_detector.py, ClearDeath-App-Detector.ps1, and Session-Header.ps1
 
 Windows 10 or Windows 11; Python 3.7+ for the Python version or Windows PowerShell 5.1 for the PowerShell version. Removal requires administrator privileges for selected entries.
 
-## Safety and limitations
+## Review and options
 
-The project must not remove personal data, credentials, or content outside paths defined by the tool. Command and feature availability depends on Windows edition and version. Review CHANGELOG.md before updating.
+A suspicious entry should be reviewed; it does not automatically mean the application is unwanted.
 
-## Development
+- **1 — Show hidden entries:** displays items hidden during this session again.
+- **2 — View suspicious entries:** lists records that need review.
+- **3 — Select for removal:** enter comma-separated numbers or `ALL`, review the selection, and type the confirmation phrase shown.
+- **4 — Remove all:** selects the found entries and still requires confirmation.
+- **5 — Exit.**
 
-See AGENTS-PT-BR.md and AGENTS-EN.md. The default interface language follows Windows UI culture; Brazilian Portuguese is the fallback.
+Before removal, the tool exports a Registry backup to `%LOCALAPPDATA%\Emertels\ClearDeath\Backups`. It removes the uninstall key, not application files. The PowerShell version requires `Session-Header.ps1`; a Python version is also included.
 
-## Languages, purpose, and tips
+### Available languages
 
-Menus, reports, warnings, confirmations, and safety messages are available in all ten languages. Removal confirmations use a localized word or phrase; type the exact text shown. To prevent accidental changes, the tool creates a Registry backup before deleting any entry.
+Detected from Windows settings; Brazilian Portuguese is the fallback.
 
-Review each orphaned entry and publisher before removal. Registry backups are in %LOCALAPPDATA%\Emertels\ClearDeath\Backups; keep them until apps are confirmed to work.
-
-### Idiomas disponíveis / Available languages
-
-| Language | Locale | Used for |
-|---|---|---|
-| Brazilian Portuguese | pt-BR | Brazilian Windows; fallback for unsupported locales |
-| English | en | English Windows |
-| Spanish | es | Spanish Windows |
-| French | fr | French Windows |
-| German | de | German Windows |
-| Italian | it | Italian Windows |
-| Japanese | ja | Japanese Windows |
-| Korean | ko | Korean Windows |
-| Simplified Chinese | zh-CN | Simplified Chinese Windows |
-| Russian | ru | Russian Windows |
+| Language | Locale | Typical system |
+|---|---|
+| Brazilian Portuguese | pt-BR | Brazilian Windows; also the fallback language. |
+| English | en | English Windows. |
+| Spanish | es | Spanish Windows. |
+| French | fr | French Windows. |
+| German | de | German Windows. |
+| Italian | it | Italian Windows. |
+| Japanese | ja | Japanese Windows. |
+| Korean | ko | Korean Windows. |
+| Simplified Chinese | zh-CN | Simplified Chinese Windows. |
+| Russian | ru | Russian Windows. |
 
 ## 👨‍💻 About the Author
 

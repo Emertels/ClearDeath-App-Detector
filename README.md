@@ -1,27 +1,55 @@
-# ClearDeath App Detector
+# 🌐 Verificador ClearDeath de Aplicativos 🇧🇷
 
-![Latest Release](https://img.shields.io/github/v/release/Emertels/ClearDeath-App-Detector) ![MIT License](https://img.shields.io/github/license/Emertels/ClearDeath-App-Detector)
+Analisa entradas de desinstalação e identifica aplicativos cujos arquivos ou desinstaladores podem estar ausentes.
 
-**Version:** 1.0.0  |  **License:** MIT
+[![Documentação](https://img.shields.io/badge/DOCUMENTA%C3%87%C3%83O-PORTUGU%C3%8AS%20(BRASIL)-green?style=for-the-badge)](README.md) [![Documentation](https://img.shields.io/badge/DOCUMENTATION-ENGLISH-0070F3?style=for-the-badge)](README-EN.md)
 
-Find and review potentially orphaned Windows uninstall entries, with a registry backup before removal.
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=flat-square) ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=flat-square) ![Plataforma](https://img.shields.io/badge/Plataforma-Windows-0078D4?style=flat-square) ![Idiomas](https://img.shields.io/badge/Idiomas-10%20auto--detectados-2ea44f?style=flat-square)
 
-- [Português (Brasil)](README-PT-BR.md)
-- [English](README-EN.md)
-- [Changelog PT-BR](CHANGELOG-PT-BR.md) · [Changelog EN](CHANGELOG-EN.md)
-- [Agent instructions / Instruções para agentes](AGENTS.md)
-- [MIT License](LICENSE)
-- [v1.0.0 release and portable ZIP](https://github.com/Emertels/ClearDeath-App-Detector/releases/tag/v1.0.0)
+[Changelog PT-BR](CHANGELOG-PT-BR.md) · [English changelog](CHANGELOG-EN.md) · [Licença MIT](LICENSE)
 
 ---
+## Arquivos
 
-## Português (Brasil)
+clear_death_app_detector.py, ClearDeath-App-Detector.ps1 e Session-Header.ps1 (necessário para a versão PowerShell)
 
-Ferramenta para localizar e revisar entradas de desinstalação potencialmente órfãs, com backup do Registro antes da remoção.
+## Como usar
 
-## English
+1. Baixe ou clone o repositório completo.
+2. Escolha uma das versões: `clear_death_app_detector.py` (Python) ou `ClearDeath-App-Detector.ps1` (PowerShell). Execute a versão escolhida e aceite o UAC quando solicitado.
 
-Find and review potentially orphaned Windows uninstall entries, with a registry backup before removal.
+## Requisitos
+
+Windows 10 ou Windows 11; Python 3.7+ para a versão Python ou Windows PowerShell 5.1 para a versão PowerShell. A remoção exige privilégios de administrador conforme as entradas selecionadas.
+
+## Análise e opções
+
+Uma entrada suspeita merece revisão; isso não significa automaticamente que o aplicativo seja inútil.
+
+- **1 — Mostrar entradas ocultadas:** volta a exibir os itens ocultos nesta sessão.
+- **2 — Ver suspeitas:** lista entradas que precisam de análise.
+- **3 — Selecionar para remoção:** informe números separados por vírgula ou `ALL`; confira a seleção e digite a frase de confirmação exibida.
+- **4 — Remover todas:** seleciona as entradas encontradas e ainda exige confirmação.
+- **5 — Sair.**
+
+Antes da remoção, exporta um backup do Registro para `%LOCALAPPDATA%\Emertels\ClearDeath\Backups`. Remove a chave de desinstalação, não os arquivos do aplicativo. A versão PowerShell requer `Session-Header.ps1`; também há versão Python.
+
+### Idiomas disponíveis
+
+Detectados pela configuração do Windows; PT-BR é o fallback.
+
+| Idioma | Código | Uso |
+|---|---|
+| Português (Brasil) | pt-BR | Interface PT-BR; também é o idioma alternativo. |
+| Inglês | en | Interface em inglês. |
+| Espanhol | es | Interface em espanhol. |
+| Francês | fr | Interface em francês. |
+| Alemão | de | Interface em alemão. |
+| Italiano | it | Interface em italiano. |
+| Japonês | ja | Interface em japonês. |
+| Coreano | ko | Interface em coreano. |
+| Chinês simplificado | zh-CN | Interface em chinês simplificado. |
+| Russo | ru | Interface em russo. |
 
 ## 👨‍💻 Sobre o Autor
 

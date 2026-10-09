@@ -2,6 +2,8 @@
 
 ## 1.0.0 — 2026-10-09
 
+- Organizes the docs into a PT-BR primary README and a separate English version, with guidance tailored to this project’s options and workflow.
+
 - Localizes single-item and bulk-removal confirmation tokens to match the displayed interface language.
 - Localizes warnings, bulk-removal confirmations, prompts, and detail labels in all ten language options.
 

@@ -2,6 +2,8 @@
 
 ## 1.0.0 — 2026-10-09
 
+- Reorganiza a documentação: README principal em PT-BR, versão independente em inglês e instruções específicas das opções/etapas deste projeto.
+
 - Localiza a palavra de confirmação das remoções individuais e em lote para que ela corresponda à interface exibida.
 - Localiza avisos, confirmações de remoção em massa, prompts e rótulos de detalhes nas dez opções de idioma.
 
