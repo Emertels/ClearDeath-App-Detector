@@ -1,56 +1,44 @@
-# 🌐 Verificador ClearDeath de Aplicativos 🇧🇷
+# 🛡️ ClearDeath App Detector — Verificador de Aplicativos Órfãos 🇧🇷
 
-Analisa entradas de desinstalação e identifica aplicativos cujos arquivos ou desinstaladores podem estar ausentes.
+<div align="center">
 
-[![Documentação](https://img.shields.io/badge/DOCUMENTA%C3%87%C3%83O-PORTUGU%C3%8AS%20(BRASIL)-green?style=for-the-badge)](README.md) [![Documentation](https://img.shields.io/badge/DOCUMENTATION-ENGLISH-0070F3?style=for-the-badge)](README-EN.md)
+**🌐 Idiomas / Languages:**  
+[![Documentação PT-BR](https://img.shields.io/badge/Documenta%C3%A7%C3%A3o-Portugu%C3%AAs%20(Brasil)-green?style=for-the-badge)](README.md)
+[![Documentation EN](https://img.shields.io/badge/Documentation-English-0070F3?style=for-the-badge)](README-EN.md)
 
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=flat-square) ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=flat-square) ![Plataforma](https://img.shields.io/badge/Plataforma-Windows-0078D4?style=flat-square) ![Idiomas](https://img.shields.io/badge/Idiomas-10%20auto--detectados-2ea44f?style=flat-square)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=for-the-badge)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=for-the-badge)
+![Plataforma](https://img.shields.io/badge/Plataforma-Windows%2010%20%7C%2011-0078D4?style=for-the-badge)
+![Idiomas](https://img.shields.io/badge/Idiomas-10%20Nativos-2ea44f?style=for-the-badge)
 
-[Changelog PT-BR](CHANGELOG-PT-BR.md) · [English changelog](CHANGELOG-EN.md) · [Licença MIT](LICENSE)
+</div>
 
 ---
-## Arquivos
 
-clear_death_app_detector.py, ClearDeath-App-Detector.ps1 e Session-Header.ps1 (necessário para a versão PowerShell)
+Analisa entradas de desinstalação no Registro do Windows e identifica programas cujos arquivos ou desinstaladores estão ausentes ou corrompidos, com backup automático preventivo.
 
-## Como usar
+## 🚀 Principais Recursos
+- **Auditoria Segura de Resíduos:** Detecta entradas órfãs deixadas por desinstalações incompletas de softwares.
+- **Backup Automático:** Antes de qualquer remoção, exporta o Registro para `%LOCALAPPDATA%\Emertels\ClearDeath\Backups`.
+- **Duplo Motor:** Disponível em script PowerShell (`ClearDeath-App-Detector.ps1`) e Python autônomo (`clear_death_app_detector.py`).
+- **Interface Multilíngue:** 10 idiomas auto-detectados com fallback em Português (Brasil).
 
-1. Baixe ou clone o repositório completo.
-2. Escolha uma das versões: `clear_death_app_detector.py` (Python) ou `ClearDeath-App-Detector.ps1` (PowerShell). Execute a versão escolhida e aceite o UAC quando solicitado.
+## 📦 Como Usar
+1. Baixe o pacote portátil na seção [Releases](https://github.com/Emertels/ClearDeath-App-Detector/releases/latest).
+2. Execute `ClearDeath-App-Detector.ps1` no PowerShell como Administrador ou rode `clear_death_app_detector.py`.
+3. Escolha as opções no menu para inspecionar, ocultar ou remover com segurança.
 
-## Requisitos
+> [!TIP]
+> Antes de confirmar a remoção de qualquer chave, o utilitário solicita uma frase de confirmação explícita para evitar qualquer exclusão acidental.
 
-Windows 10 ou Windows 11; Python 3.7+ para a versão Python ou Windows PowerShell 5.1 para a versão PowerShell. A remoção exige privilégios de administrador conforme as entradas selecionadas.
-
-## Análise e opções
-
-Uma entrada suspeita merece revisão; isso não significa automaticamente que o aplicativo seja inútil.
-
-- **1 — Mostrar entradas ocultadas:** volta a exibir os itens ocultos nesta sessão.
-- **2 — Ver suspeitas:** lista entradas que precisam de análise.
-- **3 — Selecionar para remoção:** informe números separados por vírgula ou `ALL`; confira a seleção e digite a frase de confirmação exibida.
-- **4 — Remover todas:** seleciona as entradas encontradas e ainda exige confirmação.
+## 📋 Opções do Menu
+- **1 — Mostrar entradas ocultadas:** Exibe novamente itens marcados como ignorados nesta sessão.
+- **2 — Ver suspeitas:** Lista itens que apontam para diretórios inexistentes.
+- **3 — Selecionar para remoção:** Permite digitar números individuais ou `ALL`.
+- **4 — Remover todas:** Pré-seleciona todas as suspeitas com exigência de confirmação.
 - **5 — Sair.**
 
-Antes da remoção, exporta um backup do Registro para `%LOCALAPPDATA%\Emertels\ClearDeath\Backups`. Remove a chave de desinstalação, não os arquivos do aplicativo. A versão PowerShell requer `Session-Header.ps1`; também há versão Python.
-
-### Idiomas disponíveis
-
-Detectados pela configuração do Windows; PT-BR é o fallback.
-
-| Idioma | Código | Uso |
-|---|---|
-| Português (Brasil) | pt-BR | Interface PT-BR; também é o idioma alternativo. |
-| Inglês | en | Interface em inglês. |
-| Espanhol | es | Interface em espanhol. |
-| Francês | fr | Interface em francês. |
-| Alemão | de | Interface em alemão. |
-| Italiano | it | Interface em italiano. |
-| Japonês | ja | Interface em japonês. |
-| Coreano | ko | Interface em coreano. |
-| Chinês simplificado | zh-CN | Interface em chinês simplificado. |
-| Russo | ru | Interface em russo. |
-
+---
 ## 👨‍💻 Sobre o Autor
 
 Desenvolvido e mantido por **Emerson Teles** (conhecido na comunidade como **Emertels**).
